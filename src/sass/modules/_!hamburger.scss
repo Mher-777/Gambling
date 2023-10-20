@@ -1,0 +1,29 @@
+.hamburger {
+    width: 3.6rem;
+    height: 3.6rem;
+    fill: var(--color-white);
+    position: relative;
+    .icon {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: var(--transition);
+    }
+    &.is-active {
+        .icon-open {
+            opacity: 0;
+        }
+        .icon-close {
+            opacity: 1;
+        }
+    }
+    &:not(.is-active) {
+        .icon-open {
+            opacity: 1;
+        }
+        .icon-close {
+            opacity: 0;
+        }
+    }
+}

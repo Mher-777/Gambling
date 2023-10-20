@@ -1,0 +1,70 @@
+.language {
+    min-width: 7.5rem;
+    padding: 1.2rem;
+    border: 2px solid var(--color-light-blue);
+    border-radius: 2.4rem;
+    position: relative;
+    @include large-mobile {
+        min-width: 3.6rem;
+        height: 3.6rem;
+        border-radius: 50%;
+        padding: 0.6rem;
+    }
+    &__current {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        cursor: pointer;
+        .icon {
+            width: 1.6rem;
+            height: 1.6rem;
+            flex-shrink: 0;
+            margin-right: 0.8rem;
+            fill: var(--color-light-blue);
+            @include large-mobile {
+                margin-right: 0;
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+    }
+    &__text {
+        @include large-mobile {
+            display: none;
+        }
+    }
+    &:hover {
+        .language__dropdown {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    &__dropdown {
+        padding: 2rem 1.2rem 1.2rem;
+        position: absolute;
+        width: 100%;
+        border: 2px solid var(--color-light-blue);
+        border-top: none;
+        left: 0;
+        border-bottom-left-radius: 2.4rem;
+        border-bottom-right-radius: 2.4rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: all linear .2s;
+        @include large-mobile {
+            padding: 1.2rem 0.2rem;
+        }
+    }
+    &__link {
+        display: block;
+        text-align: right;
+        padding: 0.25rem 0;
+        &:hover {
+            color: var(--color-light-blue);
+        }
+        @include large-mobile {
+            text-align: center;
+        }
+    }
+}

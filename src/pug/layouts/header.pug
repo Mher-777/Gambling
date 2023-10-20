@@ -1,0 +1,31 @@
+header.header
+    .container 
+        .header__inner
+            nav.menu.header__menu.js-menu
+                ul.menu__list
+                    li.menu__item
+                        a(href="#").menu__link About us
+                    li.menu__item
+                        a(href="#").menu__link Brands
+                    li.menu__item
+                        a(href="#").menu__link Commissions
+                    li.menu__item
+                        a(href="#").menu__link News
+                    li.menu__item
+                        a(href="#").menu__link Contact us
+                    li.menu__item
+                        a(href="#").menu__link Careers
+                a(href="#").btn.btn_small.btn_border.header__link.desktop-hide LOG IN
+                a(href="#").btn.btn_small.header__link.desktop-hide SIGN UP
+            .header__language.language
+                .language__current
+                    +icon('planet')
+                    span.language__text EN
+                .language__dropdown
+                    a(href="#").language__link RU
+                    a(href="#").language__link FR
+            .hamburger.js-btn-menu.desktop-hide
+                +icon('open')
+                +icon('close')
+            a(href="#").btn.btn_small.btn_border.header__link.mobile-hide LOG IN
+            a(href="#").btn.btn_small.header__link.mobile-hide SIGN UP
